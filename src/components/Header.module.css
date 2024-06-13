@@ -1,0 +1,228 @@
+.pitchplot {
+  text-decoration: none;
+  position: relative;
+  line-height: 15.83px;
+  font-weight: 600;
+  color: inherit;
+  white-space: nowrap;
+}
+.pitchplotWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-xl) 0 0;
+}
+.icon {
+  height: 16px;
+  width: 16px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  transform: rotate(180deg);
+  min-height: 16px;
+}
+.searchKeywords {
+  text-decoration: none;
+  position: relative;
+  line-height: 14px;
+  color: inherit;
+  white-space: nowrap;
+}
+.searchKeywordsWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-12xs) 0 0;
+}
+.iconParent {
+  flex: 1;
+  border-radius: var(--br-12xl);
+  background-color: var(--system-white);
+  border: 1px solid var(--accent2);
+  flex-direction: row;
+  padding: var(--padding-3xs) var(--padding-base);
+  gap: var(--gap-5xs);
+  transform: rotate(-180deg);
+}
+.iconParent,
+.searchBar,
+.searchBarWrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.searchBar {
+  align-self: stretch;
+  flex-direction: row;
+  padding: var(--padding-5xs) 0;
+  transform: rotate(180deg);
+}
+.searchBarWrapper {
+  flex: 1;
+  flex-direction: column;
+  padding: 0 var(--padding-mini) 0 0;
+  font-size: var(--caption-semi-bold-size);
+  color: var(--accent2);
+}
+.homefilledIcon {
+  height: 16px;
+  width: 16px;
+  position: relative;
+}
+.feed {
+  text-decoration: none;
+  position: relative;
+  line-height: 17px;
+  font-weight: 600;
+  color: inherit;
+}
+.sidebarButton {
+  border-radius: var(--br-2xl);
+  background-color: var(--accent2);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-xs) var(--padding-base);
+  gap: var(--gap-5xs);
+}
+.humbleiconsbulb {
+  height: 16px;
+  width: 16px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.yourPlots {
+  text-decoration: none;
+  position: relative;
+  line-height: 17px;
+  color: inherit;
+  white-space: nowrap;
+}
+.sidebarButton1,
+.sidebarButtonWrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.sidebarButton1 {
+  flex-direction: row;
+  padding: var(--padding-xs) var(--padding-base);
+  gap: var(--gap-5xs);
+  flex-shrink: 0;
+  debug_commit: 69da668;
+  z-index: 2;
+}
+.sidebarButtonWrapper {
+  flex-direction: column;
+  padding: 0 var(--padding-2xs) 0 0;
+}
+.create,
+.icon1 {
+  position: relative;
+}
+.icon1 {
+  height: 16px;
+  width: 16px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.create {
+  text-decoration: none;
+  line-height: 17px;
+  color: inherit;
+}
+.sidebarButton2 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-xs) var(--padding-base);
+  gap: var(--gap-5xs);
+  flex-shrink: 0;
+  debug_commit: 69da668;
+  z-index: 1;
+  margin-left: -16px;
+}
+.icon2 {
+  height: 16px;
+  width: 16px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.accountSettings {
+  text-decoration: none;
+  position: relative;
+  line-height: 17px;
+  color: inherit;
+  white-space: nowrap;
+}
+.sidebarButton3 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-xs) var(--padding-base);
+  gap: var(--gap-5xs);
+  flex-shrink: 0;
+  debug_commit: 69da668;
+  margin-left: -16px;
+}
+.frameParent {
+  flex-direction: row;
+  color: var(--system-white);
+}
+.frameParent,
+.header,
+.headerInner,
+.sidebarButtonParent {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.sidebarButtonParent {
+  flex-direction: row;
+  gap: var(--gap-xs);
+}
+.header,
+.headerInner {
+  flex-direction: column;
+  padding: var(--padding-6xs) 0 0;
+  box-sizing: border-box;
+  font-size: var(--paragraph-p1-regular-size);
+  color: var(--shades-black);
+}
+.header {
+  align-self: stretch;
+  box-shadow: var(--shadow-xs);
+  background-color: var(--main);
+  overflow: hidden;
+  flex-direction: row;
+  padding: var(--padding-mini) var(--padding-6xs) var(--padding-mini)
+    var(--padding-xs);
+  gap: var(--gap-16xl);
+  top: 0;
+  z-index: 99;
+  position: sticky;
+  text-align: left;
+  font-size: var(--font-size-21xl);
+  color: var(--system-white);
+  font-family: var(--paragraph-p1-regular);
+}
+@media screen and (max-width: 1400px) {
+  .frameParent {
+    display: none;
+  }
+}
+@media screen and (max-width: 825px) {
+  .header {
+    gap: var(--gap-mid);
+  }
+}

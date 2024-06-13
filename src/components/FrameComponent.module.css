@@ -1,0 +1,380 @@
+.frameChild {
+  width: 690px;
+  height: 690px;
+  position: relative;
+  backdrop-filter: blur(25px);
+  border-radius: var(--br-21xl);
+  background-color: var(--color-steelblue-200);
+  border: 3px solid var(--color-steelblue-100);
+  box-sizing: border-box;
+  display: none;
+  max-width: 100%;
+}
+.pitchplot,
+.welcomeBack {
+  height: 36px;
+  position: relative;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+}
+.welcomeBack {
+  margin: 0;
+  height: 57px;
+  font-size: var(--font-size-19xl);
+  font-family: inherit;
+}
+.welcomeMessage {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-8xs);
+  font-size: var(--font-size-5xl);
+}
+.email {
+  height: 27px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+}
+.emailFieldChild {
+  height: 50px;
+  width: 500px;
+  position: relative;
+  border-radius: var(--br-3xs);
+  background-color: var(--system-white);
+  border: 1px solid var(--color-silver-100);
+  box-sizing: border-box;
+  display: none;
+  max-width: 100%;
+}
+.usernamegmailcom {
+  position: relative;
+  white-space: nowrap;
+  z-index: 3;
+}
+.emailField,
+.emailInput {
+  align-self: stretch;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.emailField {
+  border-radius: var(--br-3xs);
+  background-color: var(--system-white);
+  border: 1px solid var(--color-silver-100);
+  flex-direction: row;
+  padding: var(--padding-smi) var(--padding-4xl) var(--padding-xs);
+  z-index: 2;
+  font-size: var(--paragraph-p1-regular-size);
+  color: var(--color-silver-100);
+}
+.emailInput {
+  flex-direction: column;
+  padding: 0 0 var(--padding-3xs);
+  gap: var(--gap-11xs);
+}
+.password {
+  height: 27px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+}
+.passwordFieldChild {
+  height: 50px;
+  width: 500px;
+  position: relative;
+  border-radius: var(--br-3xs);
+  background-color: var(--system-white);
+  border: 1px solid var(--color-silver-100);
+  box-sizing: border-box;
+  display: none;
+  max-width: 100%;
+}
+.password1 {
+  height: 21px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  z-index: 3;
+}
+.clarityeyeHideLineIcon {
+  width: 16px;
+  height: 16px;
+  position: relative;
+  border-radius: var(--br-21xl);
+  overflow: hidden;
+  flex-shrink: 0;
+  z-index: 3;
+}
+.passwordVisibility {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-11xs) 0 0;
+}
+.passwordField,
+.passwordFields {
+  align-self: stretch;
+  display: flex;
+  align-items: flex-start;
+  max-width: 100%;
+}
+.passwordField {
+  border-radius: var(--br-3xs);
+  background-color: var(--system-white);
+  border: 1px solid var(--color-silver-100);
+  box-sizing: border-box;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: var(--padding-smi) var(--padding-3xl) var(--padding-xs);
+  gap: var(--gap-xl);
+  z-index: 2;
+  font-size: var(--paragraph-p1-regular-size);
+  color: var(--color-silver-100);
+}
+.passwordFields {
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: var(--gap-11xs);
+}
+.forgotPassword {
+  position: relative;
+  font-size: var(--caption-semi-bold-size);
+  z-index: 2;
+}
+.passwordInput {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 0 var(--padding-4xl);
+  box-sizing: border-box;
+  gap: var(--gap-mini);
+  max-width: 100%;
+}
+.githubButtonBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: var(--br-3xs);
+  background-color: var(--color-darkslateblue-100);
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  z-index: 2;
+}
+.signIn {
+  position: absolute;
+  top: 10px;
+  left: 218px;
+  font-weight: 700;
+  z-index: 3;
+}
+.githubSignInButton {
+  height: 50px;
+  flex: 1;
+  position: relative;
+  white-space: nowrap;
+  max-width: 100%;
+}
+.githubSignIn {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 0 var(--padding-smi) var(--padding-10xs);
+  box-sizing: border-box;
+  max-width: 100%;
+  font-size: var(--font-size-xl);
+}
+.orContinueWith {
+  height: 21px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+}
+.divider {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 0 var(--padding-4xs) var(--padding-7xs);
+  font-size: var(--paragraph-p1-regular-size);
+}
+.frameInner,
+.frameItem {
+  width: 150px;
+  position: relative;
+}
+.frameItem {
+  align-self: stretch;
+  max-height: 100%;
+  min-height: 50px;
+  z-index: 2;
+}
+.frameInner {
+  height: 50px;
+  border-radius: var(--br-3xs);
+  background-color: var(--system-white);
+  border: 1px solid var(--color-silver-100);
+  box-sizing: border-box;
+  display: none;
+}
+.akarIconsgithubFill {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  border-radius: var(--br-21xl);
+  overflow: hidden;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.rectangleDiv,
+.rectangleGroup {
+  border-radius: var(--br-3xs);
+  background-color: var(--system-white);
+  border: 1px solid var(--color-silver-100);
+}
+.rectangleGroup {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-2xs) var(--padding-44xl);
+  z-index: 2;
+}
+.rectangleDiv {
+  height: 50px;
+  width: 150px;
+  position: relative;
+  box-sizing: border-box;
+  display: none;
+}
+.bifacebookIcon {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  border-radius: var(--br-21xl);
+  overflow: hidden;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.frameParent,
+.githubSignIn1,
+.rectangleContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.rectangleContainer {
+  border-radius: var(--br-3xs);
+  background-color: var(--system-white);
+  border: 1px solid var(--color-silver-100);
+  justify-content: flex-start;
+  padding: var(--padding-2xs) var(--padding-44xl);
+  z-index: 2;
+}
+.frameParent,
+.githubSignIn1 {
+  max-width: 100%;
+}
+.frameParent {
+  justify-content: center;
+  gap: var(--gap-6xl);
+}
+.githubSignIn1 {
+  justify-content: flex-start;
+  padding: 0 0 var(--padding-smi) var(--padding-10xs);
+  box-sizing: border-box;
+}
+.dontHaveAn,
+.registerForFree {
+  position: relative;
+  z-index: 2;
+}
+.registerForFree {
+  font-weight: 600;
+}
+.dontHaveAnAccountYetParent,
+.rectangleParent,
+.registration {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.dontHaveAnAccountYetParent {
+  gap: var(--gap-11xs);
+}
+.rectangleParent,
+.registration {
+  padding: 0 var(--padding-58xl);
+  box-sizing: border-box;
+  max-width: 100%;
+  font-size: var(--paragraph-p1-regular-size);
+}
+.rectangleParent {
+  width: 690px;
+  backdrop-filter: blur(25px);
+  border-radius: var(--br-21xl);
+  background-color: var(--color-steelblue-200);
+  border: 3px solid var(--color-steelblue-100);
+  flex-direction: column;
+  padding: var(--padding-21xl) var(--padding-69xl) var(--padding-22xl)
+    var(--padding-74xl);
+  gap: var(--gap-mid);
+  z-index: 1;
+  text-align: left;
+  font-size: var(--font-size-lg);
+  color: var(--system-white);
+  font-family: var(--paragraph-p1-regular);
+}
+@media screen and (max-width: 750px) {
+  .welcomeBack {
+    font-size: var(--font-size-11xl);
+  }
+  .rectangleParent {
+    padding: var(--padding-7xl) var(--padding-25xl) var(--padding-8xl)
+      var(--padding-27xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 675px) {
+  .frameParent {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 450px) {
+  .pitchplot {
+    font-size: var(--font-size-lgi);
+  }
+  .welcomeBack {
+    font-size: var(--font-size-4xl);
+  }
+  .dontHaveAnAccountYetParent {
+    flex-wrap: wrap;
+  }
+  .rectangleParent,
+  .registration {
+    padding-left: var(--padding-19xl);
+    padding-right: var(--padding-19xl);
+    box-sizing: border-box;
+  }
+  .rectangleParent {
+    padding-left: var(--padding-xl);
+    padding-right: var(--padding-xl);
+  }
+}
