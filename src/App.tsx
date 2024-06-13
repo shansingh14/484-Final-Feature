@@ -1,58 +1,73 @@
-import { useEffect } from "react";
+import React, { useState } from "react";
 import {
-  Routes,
-  Route,
-  useNavigationType,
-  useLocation,
-} from "react-router-dom";
-import FeedPage from "./pages/FeedPage";
-import LoginPage from "./pages/LoginPage";
+  ChakraProvider,
+  Box,
+  Flex,
+  VStack,
+  useDisclosure,
+} from "@chakra-ui/react";
+import Navbar from "./components/Navbar";
+import Sidebar from "./components/Sidebar";
+import Post from "./components/Post";
+import CreatePostModal from "./components/CreatePostModal";
 
-function App() {
-  const action = useNavigationType();
-  const location = useLocation();
-  const pathname = location.pathname;
+const App: React.FC = () => {
+  const [posts, setPosts] = useState([
+    {
+      id: 1,
+      author: "Bob Smith",
+      date: "May 27th, 2024",
+      content: "Taylor Swift Listening Party...",
+      imageUrl: "",
+    },
+    {
+      id: 2,
+      author: "Adi Go",
+      date: "May 27th, 2024",
+      content: "I am really enjoying this new single by Clario!",
+      imageUrl: "/path/to/image.jpg",
+    },
+    {
+      id: 3,
+      author: "Hugh Ganem",
+      date: "May 26th, 2024",
+      content: "Billie's new album is fire!!!!!!! 🔥 I LOOOOVE THE PRODUCTION!",
+      imageUrl: "/path/to/image2.jpg",
+    },
+  ]);
 
-  useEffect(() => {
-    if (action !== "POP") {
-      window.scrollTo(0, 0);
-    }
-  }, [action, pathname]);
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
-  useEffect(() => {
-    let title = "";
-    let metaDescription = "";
-
-    switch (pathname) {
-      case "/":
-        title = "";
-        metaDescription = "";
-        break;
-      case "/login-page":
-        title = "";
-        metaDescription = "";
-        break;
-    }
-
-    if (title) {
-      document.title = title;
-    }
-
-    if (metaDescription) {
-      const metaDescriptionTag: HTMLMetaElement | null = document.querySelector(
-        'head > meta[name="description"]'
-      );
-      if (metaDescriptionTag) {
-        metaDescriptionTag.content = metaDescription;
-      }
-    }
-  }, [pathname]);
+  const addPost = (content: string) => {
+    const newPost = {
+      id: posts.length + 1,
+      author: "New User",
+      date: new Date().toLocaleDateString(),
+      content,
+      imageUrl: "",
+    };
+    setPosts([newPost, ...posts]);
+    onClose();
+  };
 
   return (
-    <Routes>
-      <Route path="/" element={<FeedPage />} />
-      <Route path="/login-page" element={<LoginPage />} />
-    </Routes>
+    <ChakraProvider>
+      <Flex direction="column" height="100vh">
+        <Navbar onOpenCreatePostModal={onOpen} />
+        <Flex flex="1">
+          <Sidebar />
+          <Box flex="1" overflowY="auto" p="4">
+            <VStack spacing="4">
+              {posts.map((post) => (
+                <Post key={post.id} post={post} />
+              ))}
+            </VStack>
+          </Box>
+        </Flex>
+        <CreatePostModal isOpen={isOpen} onClose={onClose} addPost={addPost} />
+      </Flex>
+    </ChakraProvider>
   );
-}
+};
+
 export default App;
