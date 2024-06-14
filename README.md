@@ -8,10 +8,7 @@ PitchPlot is a social media platform for music enthusiasts to connect, share pos
 ## Table of Contents
 - [Getting Started](#getting-started)
 - [Project Structure](#project-structure)
-- [Available Scripts](#available-scripts)
-- [Contributing](#contributing)
-- [License](#license)
-
+- 
 ## Getting Started
 
 To get a local copy up and running, follow these simple steps.
