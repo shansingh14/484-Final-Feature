@@ -24,55 +24,46 @@ Make sure you have the following installed:
 1. Clone the repository:
    ```sh
    git clone https://github.com/your-username/PitchPlot.git
-Navigate to the project directory:
+   
+##Navigate to the project directory:
 
-sh
-Copy code
 cd PitchPlot
-Install dependencies:
 
-sh
-Copy code
+
+##Install dependencies:
+
+
 npm install
 or
 
-sh
-Copy code
 yarn install
-Running the Project
+
+
+
+##Running the Project
 To start the development server, run:
 
-sh
-Copy code
 npm start
 or
-
-sh
-Copy code
 yarn start
+
 This will start the development server and open the project in your default browser at http://localhost:3000.
 
-Building the Project
-To build the project for production, run:
+##Building the Project
+###To build the project for production, run:
 
-sh
-Copy code
 npm run build
 or
-
-sh
-Copy code
 yarn build
+
 This will create an optimized production build in the build directory.
 
-Project Structure
+##Project Structure
 The project's directory structure is organized as follows:
-
-
 
 In the project directory, you can run:
 
-npm start / yarn start
+npm start run/ yarn start
 Runs the app in the development mode.
 Open http://localhost:3000 to view it in the browser.
 
