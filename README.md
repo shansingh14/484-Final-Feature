@@ -1,5 +1,8 @@
 # PitchPlot
 
+## Demo:  
+https://youtu.be/2i7mmpIb-N4
+
 PitchPlot is a social media platform for music enthusiasts to connect, share posts, and recommend albums. This project is built using React, TypeScript, and Chakra UI.
 
 ## Table of Contents
@@ -77,7 +80,4 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 npm run eject
 Note: this is a one-way operation. Once you eject, you can’t go back!
-
-## Demo:  
-https://youtu.be/2i7mmpIb-N4
 
