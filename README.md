@@ -68,47 +68,20 @@ This will create an optimized production build in the build directory.
 Project Structure
 The project's directory structure is organized as follows:
 
-ruby
-Copy code
-PitchPlot/
-├── public/
-│   ├── index.html          # Main HTML file
-│   └── ...                 # Other public assets
-├── src/
-│   ├── components/         # Reusable UI components
-│   │   ├── Navbar.tsx
-│   │   ├── Sidebar.tsx
-│   │   ├── Post.tsx
-│   │   ├── CreatePostModal.tsx
-│   │   ├── AlbumDetail.tsx
-│   │   └── FeedContent.tsx
-│   ├── styles/             # CSS modules and global styles
-│   │   ├── FeedContent.module.css
-│   │   ├── Feed.module.css
-│   │   └── FrameComponent.module.css
-│   ├── App.tsx             # Main application component
-│   ├── index.tsx           # Entry point for React
-│   ├── react-app-env.d.ts  # TypeScript environment settings
-│   ├── reportWebVitals.ts  # Performance measurement
-│   └── setupTests.ts       # Testing setup
-├── .gitignore              # Git ignore file
-├── package.json            # Project metadata and dependencies
-├── tsconfig.json           # TypeScript configuration
-├── README.md               # Project documentation
-└── yarn.lock / package-lock.json   # Lockfile for npm/yarn dependencies
-Available Scripts
+
+
 In the project directory, you can run:
 
 npm start / yarn start
-Runs the app in the development mode.<br />
+Runs the app in the development mode.
 Open http://localhost:3000 to view it in the browser.
 
 npm test / yarn test
-Launches the test runner in the interactive watch mode.<br />
+Launches the test runner in the interactive watch mode.
 See the section about running tests for more information.
 
 npm run build / yarn build
-Builds the app for production to the build folder.<br />
+Builds the app for production to the build folder.
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
 npm run eject
