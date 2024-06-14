@@ -30,7 +30,7 @@ Make sure you have the following installed:
 cd PitchPlot
 
 
-##Install dependencies:
+## Install dependencies:
 
 
 npm install
