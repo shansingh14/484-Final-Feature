@@ -1,6 +1,16 @@
 import React from "react";
-import { Box, Text, HStack, VStack, Avatar } from "@chakra-ui/react";
+import {
+  Box,
+  Text,
+  HStack,
+  VStack,
+  Avatar,
+  Image,
+  Center,
+  Flex,
+} from "@chakra-ui/react";
 import { FaHeart, FaComment, FaShare, FaMusic } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 interface PostProps {
   post: {
@@ -9,10 +19,19 @@ interface PostProps {
     date: string;
     content: string;
     imageUrl: string;
+    albumLink: string;
   };
 }
 
 const Post: React.FC<PostProps> = ({ post }) => {
+  const navigate = useNavigate();
+
+  const handleImageClick = () => {
+    navigate(`/album/${post.id}`, {
+      state: { imageUrl: post.imageUrl, albumLink: post.albumLink },
+    });
+  };
+
   return (
     <Box
       borderWidth="1px"
@@ -21,8 +40,10 @@ const Post: React.FC<PostProps> = ({ post }) => {
       width="100%"
       p="4"
       bg="white"
+      boxShadow="md"
+      mb="4"
     >
-      <HStack spacing="4">
+      <HStack spacing="4" alignItems="center">
         <Avatar name={post.author} />
         <VStack align="start" spacing="0">
           <Text fontWeight="bold">{post.author}</Text>
@@ -31,23 +52,28 @@ const Post: React.FC<PostProps> = ({ post }) => {
           </Text>
         </VStack>
       </HStack>
-      <Text mt="4">{post.content}</Text>
-      {post.imageUrl && (
-        <Box
-          mt="4"
-          bgImage={`url(${post.imageUrl})`}
-          bgSize="cover"
-          bgPos="center"
-          height="200px"
-          borderRadius="md"
-        />
-      )}
-      <HStack mt="4" spacing="4">
-        <FaHeart />
-        <FaComment />
-        <FaShare />
-        <FaMusic />
-      </HStack>
+      <Flex direction="column" align="center" mt="4">
+        <Text mb="4" textAlign="center">
+          {post.content}
+        </Text>
+        {post.imageUrl && (
+          <Box mb="4" onClick={handleImageClick} cursor="pointer">
+            <Image
+              src={post.imageUrl}
+              alt={post.content}
+              boxSize="200px"
+              objectFit="cover"
+              borderRadius="md"
+            />
+          </Box>
+        )}
+        <HStack spacing="4">
+          <FaHeart />
+          <FaComment />
+          <FaShare />
+          <FaMusic />
+        </HStack>
+      </Flex>
     </Box>
   );
 };

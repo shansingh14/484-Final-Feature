@@ -3,7 +3,7 @@ import { Box, VStack, Avatar, Text, HStack } from "@chakra-ui/react";
 
 const Sidebar: React.FC = () => {
   return (
-    <Box width="250px" bg="gray.100" p="4">
+    <Box width="250px" bg="#EAF6FF" p="4" overflowY="auto">
       <VStack align="start">
         <Text fontWeight="bold">Friends</Text>
         <VStack align="start" spacing="4">
